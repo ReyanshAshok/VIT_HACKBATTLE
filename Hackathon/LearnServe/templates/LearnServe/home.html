@@ -2,24 +2,79 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LearnServe - Empowering Education</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #007BFF;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        h1 {
+            font-size: 36px;
+            margin: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 18px;
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            margin: 10px 0;
+            text-decoration: none;
+        }
+
+        .btn:hover {
+            background-color: #0056b3;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background-color: #007BFF;
+            color: #fff;
+        }
+    </style>
 </head>
 <body>
+    <header>
+        <h1>Welcome to LearnServe</h1>
+        <p>Empowering Education for All</p>
+    </header>
 
-<a href="http://127.0.0.1:8000/LearnServe/volenteering">
-    <button type="button">Visit Volenteering</button>
-</a>
-<br>
-<a href="http://127.0.0.1:8000/LearnServe/teaching">
-    <button type="button"> Teachers</button>
+    <div class="container">
+        <h2>Get Involved</h2>
+        <p>Choose how you'd like to contribute to our mission:</p>
 
-</a>
-<br>
-<a href="http://127.0.0.1:8000/LearnServe/educatoin">
-    <button type="button">Education</button>
-</a>
+        <a href="http://127.0.0.1:8000/LearnServe/volenteering" class="btn">Become a Volunteer</a>
+        <br>
+        <a href="http://127.0.0.1:8000/LearnServe/teaching" class="btn">Become an Educator</a>
+        <br>
+        <a href="http://127.0.0.1:8000/LearnServe/education" class="btn">Explore Our Education Programs</a>
+    </div>
 
-
-
+    <footer>
+        &copy; 2023 LearnServe - Empowering Education
+    </footer>
 </body>
 </html>

@@ -9,6 +9,6 @@ urlpatterns= [
     path("/teaching/information",views.teaching_info,name="teaching_info"),
     path("/volenteer/information",views.volenteer_info,name="volenteer_info"),
     path("/teaching",views.teachers,name="teaching"),
-    path("/education",views.education,name="scouting")
+    path("/education",views.education,name="education")
 
 ]

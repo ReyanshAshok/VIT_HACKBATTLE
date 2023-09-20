@@ -1,86 +1,97 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@700&family=Nanum+Gothic:wght@700&family=Quicksand:wght@300;500;600;700&family=Raleway:wght@200;300&family=Roboto+Slab:wght@700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
     <style>
-        * {
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f6f6f6;
             margin: 0;
             padding: 0;
         }
 
-        .header_buttons {
-            font-family: 'Quicksand', sans-serif;
-            background-color: #FFE7D1 ;
-            overflow: hidden;
+        .login-container {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #ffffff;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
             text-align: center;
         }
 
-        .header_buttons a {
-            display: inline-block;
-            color: #396362;
-            text-align: center;
-            font-size: x-large;
-            padding: 18px 22px;
+        h2 {
+            font-size: 28px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .login-form {
+            text-align: left;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+            font-size: 18px;
+            color: #333;
+        }
+
+        input[type="text"], input[type="password"] {
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+            outline: none;
+        }
+
+        .login-btn {
+            background-color: #007BFF;
+            color: #fff;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 20px;
+            transition: background-color 0.3s ease;
+        }
+
+        .login-btn:hover {
+            background-color: #0056b3;
+        }
+
+        p {
+            font-size: 16px;
+            color: #333;
+        }
+
+        a {
+            color: #007BFF;
             text-decoration: none;
         }
 
-        .header_buttons b{
-            color: white;
-            float: right;
-            margin-top: 5px;
-            padding: 18px 22px;
-            text-decoration: dashed;
-            border-radius: 30px;
-            background-color: #4B8E8D;
-        }
-
-        .image-container img{
-            width: 100%;
-            height: 100%;
-            background-size: cover;
-            background-position: center;
-            margin: 0px;
-            padding: 0px;
-        }
-
-        .welcome {
-            font-family: 'Manrope', sans-serif;
-            font-size: 50px;
-            text-align: center;
-            margin-top: 30px;
-        }
-
-        .welcome c{
-            color: #3A7563;
-        }
-
-        .intro {
-            font-family: 'Raleway', sans-serif;
-            font-size: 23px;
-            text-align: center;
-            margin-top: 30px;
+        a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
-    <div class="header_buttons">
-        <a href="#" class="home">Home</a>
-        <a href="#" class="about">About</a>
-        <a href="#" class="register">Register</a>
-        <a href="#" class="contact">Contact Us</a>
-        <a href="test_display.html" class="sign">Sign In/Sign Up</a>
-    </div>
-    <div class="image-container">
-        <img src="" alt="">
-    </div>
-    <div class="welcome">
-        <p>Welcome To <c>One Planet</c> &#127757;</p>
-    </div>
-    <div class="intro">
-        Access to quality education and gender equality remains a challenge in underprivileged </br> communities, hindered by limited educational resources and opportunities. Additionally, volunteerism </br>and community engagement for SDG-related projects lack effective coordination and awareness.</br>
-    </br>Our proposed solution to this is a website that addresses these challenges. This</br> website will empower underprivileged communities by providing easy access to educational resources,</br> courses, and support. Additionally, it will connect individuals interested in volunteering with SDG-related</br> projects and initiatives in their local communities, facilitating volunteer recruitment and engagement.
+    <div class="login-container">
+        <h2>Login</h2>
+        <form method="post" class="login-form">
+            {% csrf_token %}
+            {{ form.username.label_tag }}
+            {{ form.username }}
+            {{ form.password.label_tag }}
+            {{ form.password }}
+            <button type="submit" class="login-btn">Log In</button>
+            <p>Don't have an account? <a href="{% url 'signup' %}">Sign Up</a></p>
+        </form>
     </div>
 </body>
 </html>
